@@ -81,7 +81,7 @@ export function Header() {
 
 export function Footer({ standalone = true }: { standalone?: boolean }) {
   return (
-    <footer className={`bg-white${standalone ? " page-section" : ""}`}>
+    <footer className={`footer bg-white${standalone ? " page-section" : ""}`}>
       {standalone && <Header />}
       <div className="mx-auto max-w-7xl px-4 pb-8 pt-16 sm:px-6 lg:px-8 lg:pt-24">
         <div className="border-t border-gray-100 pt-8 sm:flex sm:items-center sm:justify-between">
