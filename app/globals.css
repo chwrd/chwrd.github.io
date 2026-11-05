@@ -604,6 +604,12 @@ blockquote cite {
   margin-left: auto;
 }
 
+.footer-social svg {
+  display: block;
+  height: 24px;
+  width: 24px;
+}
+
 .footer {
   min-height: 0;
   padding: 32px clamp(24px, 5vw, 112px) 48px;
