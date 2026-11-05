@@ -605,20 +605,12 @@ blockquote cite {
 }
 
 .footer {
-  min-height: 300px;
-  padding: 64px clamp(24px, 5vw, 112px) 100px;
+  min-height: 0;
+  padding: 32px clamp(24px, 5vw, 112px) 48px;
 }
 
 .page-section > .topbar {
   margin-bottom: 80px;
-}
-
-.footer p {
-  font-family: var(--font-eczar), serif;
-  font-size: 22px;
-  line-height: 1.25;
-  margin: 0 0 40px;
-  max-width: 934px;
 }
 
 .footer .button {
@@ -706,12 +698,7 @@ blockquote cite {
   }
 
   .footer {
-    padding: 24px 20px 64px;
-  }
-
-  .footer p {
-    font-size: 24px;
-    margin-bottom: 28px;
+    padding: 16px 20px 32px;
   }
 
   .footer .button {
@@ -856,8 +843,7 @@ blockquote cite {
     flex-basis: 50%;
   }
 
-  .about-inner,
-  .footer p {
+  .about-inner {
     max-width: 1130px;
     width: 90vw;
   }
@@ -895,14 +881,10 @@ blockquote cite {
   }
 
   .footer {
-    min-height: 300px;
-    padding-top: 100px;
-    padding-bottom: 120px;
+    padding-top: 48px;
+    padding-bottom: 64px;
   }
 
-  .footer p {
-    font-size: clamp(32px, 3vw, 52px);
-  }
 }
 
 @media (min-width: 700px) and (max-width: 1099px) {
@@ -993,8 +975,7 @@ blockquote cite {
   }
 
   .work-inner,
-  .about-inner,
-  .footer p {
+  .about-inner {
     max-width: 85vw;
     width: 85vw;
   }
