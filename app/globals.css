@@ -844,6 +844,7 @@ blockquote cite {
   .testimonial-section,
   .about-section,
   .contact-section,
+  .travel-section,
   .footer {
     padding-left: 32px;
     padding-right: 32px;
@@ -1074,6 +1075,7 @@ blockquote cite {
   .testimonial-section,
   .about-section,
   .contact-section,
+  .travel-section,
   .footer {
     padding-left: 7.5vw;
     padding-right: 7.5vw;
@@ -1145,4 +1147,847 @@ blockquote cite {
     margin: 30px auto -30px;
     max-width: 220px;
   }
+}
+
+
+/* ==========================================================================
+   Travel & Exchanges Page Styles
+   ========================================================================== */
+
+.travel-section {
+  background: var(--peach);
+  padding: 64px clamp(24px, 5vw, 112px) 100px;
+}
+
+.travel-inner {
+  margin: 0 auto;
+  max-width: 1180px;
+  width: 90vw;
+}
+
+.travel-heading {
+  margin-bottom: 48px;
+}
+
+.travel-heading h1 {
+  font-size: clamp(36px, 4vw, 56px);
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+.travel-summary {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 0 28px;
+}
+
+/* Quick stats */
+.travel-stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.travel-stat-pill {
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  display: inline-flex;
+  gap: 8px;
+  padding: 8px 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.travel-stat-icon {
+  font-size: 16px;
+}
+
+.travel-stat-number {
+  font-family: var(--font-eczar), serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.travel-stat-label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Map Wrapper */
+.travel-map-wrapper {
+  margin-bottom: 60px;
+}
+
+.travel-map-header {
+  margin-bottom: 18px;
+}
+
+.travel-map-header h2 {
+  font-size: 26px;
+  margin: 0 0 6px;
+}
+
+.travel-map-header p {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Map Container Frame */
+.travel-map-container {
+  background: #171717;
+  border: 1px solid #2a2a2a;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.travel-map-toolbar {
+  align-items: center;
+  background: rgba(23, 23, 23, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #262626;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 18px;
+  z-index: 5;
+}
+
+.travel-map-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.travel-map-btn {
+  background: #262626;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  color: #e5e5e5;
+  cursor: pointer;
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  transition: all 180ms ease;
+}
+
+.travel-map-btn:hover {
+  background: #383838;
+  border-color: #555;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.travel-map-zoom-controls {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+}
+
+.travel-map-zoom-level {
+  align-items: center;
+  background: #202020;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  color: #9ca3af;
+  display: inline-flex;
+  font-family: var(--font-work-sans), monospace, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  height: 32px;
+  justify-content: center;
+  padding: 0 10px;
+  user-select: none;
+}
+
+.travel-map-icon-btn {
+  align-items: center;
+  background: #262626;
+  border: 1px solid #3a3a3a;
+  border-radius: 8px;
+  color: #e5e5e5;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  height: 32px;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  transition: all 180ms ease;
+  width: 32px;
+}
+
+.travel-map-icon-btn:hover {
+  background: #383838;
+  border-color: #555;
+  color: #fff;
+}
+
+/* Map Canvas Area */
+.travel-map-canvas {
+  background: radial-gradient(circle at 60% 40%, #1f242d 0%, #121417 100%);
+  min-height: 380px;
+  position: relative;
+  width: 100%;
+}
+
+.travel-composable-map {
+  display: block;
+  height: auto;
+  max-height: 520px;
+  touch-action: none;
+  width: 100%;
+}
+
+.travel-map-skeleton {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 420px;
+  justify-content: center;
+  color: #a3a3a3;
+  font-size: 14px;
+}
+
+.travel-map-spinner {
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top-color: #60a5fa;
+  height: 36px;
+  width: 36px;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Floating Tooltip */
+.travel-map-tooltip {
+  background: rgba(30, 30, 30, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  margin: 12px 16px;
+  padding: 14px 18px;
+  animation: fadeIn 200ms ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.travel-map-tooltip-header {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.travel-map-dot {
+  border-radius: 50%;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+}
+
+.travel-map-tooltip-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.travel-map-badge {
+  border: 1px solid;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 10px;
+}
+
+.travel-map-tooltip-close {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: #9ca3af;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 12px;
+  height: 24px;
+  justify-content: center;
+  line-height: 1;
+  margin-left: auto;
+  padding: 0;
+  transition: all 150ms ease;
+  width: 24px;
+}
+
+.travel-map-tooltip-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.travel-map-tooltip-body {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.travel-map-tooltip-period {
+  color: #9ca3af;
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.travel-map-tooltip-desc {
+  color: #e5e7eb;
+  margin: 0;
+}
+
+/* Legend */
+.travel-map-legend {
+  align-items: center;
+  background: #171717;
+  border-top: 1px solid #262626;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 12px 18px;
+}
+
+.travel-legend-item {
+  align-items: center;
+  color: #a3a3a3;
+  display: inline-flex;
+  font-size: 12px;
+  gap: 6px;
+}
+
+.travel-legend-dot {
+  border-radius: 50%;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+}
+
+/* List & Grid Section */
+.travel-list-section {
+  margin-top: 40px;
+}
+
+.travel-list-controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.travel-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.travel-filter-chip {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 999px;
+  color: var(--ink);
+  cursor: pointer;
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 18px;
+  transition: all 180ms ease;
+}
+
+.travel-filter-chip:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.travel-filter-chip.active {
+  background: #303030;
+  border-color: #303030;
+  color: #fff;
+}
+
+.travel-view-toggle {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: inline-flex;
+  overflow: hidden;
+  padding: 3px;
+}
+
+.travel-toggle-btn {
+  background: none;
+  border: none;
+  border-radius: 7px;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  transition: all 150ms ease;
+}
+
+.travel-toggle-btn.active {
+  background: #303030;
+  color: #fff;
+}
+
+/* Cards Grid */
+.travel-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.travel-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.travel-card:hover {
+  border-color: rgba(78, 94, 128, 0.4);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.travel-card.selected {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px var(--blue), 0 12px 28px rgba(78, 94, 128, 0.18);
+}
+
+.travel-card.upcoming {
+  border-left: 4px solid #10b981;
+}
+
+.travel-card-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.travel-card-badge {
+  border: 1px solid;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 12px;
+  white-space: nowrap;
+}
+
+.travel-card-period {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.travel-card-title {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.travel-card-highlights {
+  color: var(--muted);
+  flex-grow: 1;
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 0 0 20px;
+}
+
+.travel-card-footer {
+  align-items: center;
+  border-top: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 14px;
+}
+
+.travel-card-coords {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.travel-locate-btn {
+  background: none;
+  border: none;
+  color: var(--blue);
+  cursor: pointer;
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0;
+  transition: opacity 150ms ease;
+}
+
+.travel-locate-btn:hover {
+  opacity: 0.75;
+}
+
+/* Table View */
+.travel-table-container {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  overflow-x: auto;
+}
+
+.travel-table {
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: left;
+  width: 100%;
+}
+
+.travel-table th {
+  background: #fafaf9;
+  border-bottom: 1px solid #e5e7eb;
+  color: var(--ink);
+  font-family: var(--font-work-sans), sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 14px 20px;
+  white-space: nowrap;
+}
+
+.travel-table td {
+  border-bottom: 1px solid #f3f4f6;
+  color: var(--ink);
+  padding: 16px 20px;
+  vertical-align: middle;
+}
+
+.travel-table tr {
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.travel-table tr:hover {
+  background-color: #fbfbfa;
+}
+
+.travel-table tr.selected-row {
+  background-color: #f0f4fa;
+}
+
+.travel-table-date {
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.travel-table-dest {
+  white-space: nowrap;
+}
+
+.travel-table-desc {
+  color: var(--muted);
+  max-width: 440px;
+}
+
+@media (max-width: 699px) {
+  .travel-section {
+    padding: 24px 14px 60px;
+  }
+
+  .travel-heading {
+    margin-bottom: 24px;
+  }
+
+  .travel-heading h1 {
+    font-size: 28px;
+    line-height: 1.15;
+  }
+
+  .travel-summary {
+    font-size: 15px;
+    line-height: 1.45;
+    margin: 8px 0 20px;
+  }
+
+  /* 2x2 Stats Grid on mobile */
+  .travel-stats-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .travel-stat-pill {
+    border-radius: 12px;
+    gap: 6px;
+    justify-content: flex-start;
+    padding: 10px 12px;
+  }
+
+  .travel-stat-icon {
+    font-size: 15px;
+  }
+
+  .travel-stat-number {
+    font-size: 18px;
+  }
+
+  .travel-stat-label {
+    font-size: 11px;
+    line-height: 1.2;
+  }
+
+  /* Compact Map on mobile */
+  .travel-map-wrapper {
+    margin-bottom: 32px;
+  }
+
+  .travel-map-header {
+    margin-bottom: 12px;
+  }
+
+  .travel-map-header h2 {
+    font-size: 20px;
+  }
+
+  .travel-map-header p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .travel-map-container {
+    border-radius: 14px;
+  }
+
+  .travel-map-toolbar {
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding: 8px 10px;
+  }
+
+  .travel-map-presets {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 2px;
+  }
+
+  .travel-map-presets::-webkit-scrollbar {
+    display: none;
+  }
+
+  .travel-map-btn {
+    flex-shrink: 0;
+    font-size: 12px;
+    padding: 5px 10px;
+    white-space: nowrap;
+  }
+
+  .travel-map-zoom-controls {
+    flex-shrink: 0;
+    gap: 4px;
+  }
+
+  .travel-map-zoom-level {
+    font-size: 10px;
+    height: 28px;
+    padding: 0 6px;
+  }
+
+  .travel-map-icon-btn {
+    font-size: 14px;
+    height: 28px;
+    width: 28px;
+  }
+
+  .travel-map-canvas {
+    min-height: 280px;
+  }
+
+  .travel-composable-map {
+    max-height: 380px;
+  }
+
+  .travel-map-tooltip {
+    margin: 8px;
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
+
+  .travel-map-tooltip-header {
+    gap: 6px;
+  }
+
+  .travel-map-tooltip-title {
+    font-size: 14px;
+  }
+
+  .travel-map-badge {
+    font-size: 10px;
+    padding: 1px 8px;
+  }
+
+  .travel-map-tooltip-desc {
+    font-size: 12px;
+  }
+
+  .travel-map-legend {
+    gap: 8px 12px;
+    padding: 8px 10px;
+  }
+
+  .travel-legend-item {
+    font-size: 11px;
+    gap: 5px;
+  }
+
+  .travel-legend-dot {
+    height: 6px;
+    width: 6px;
+  }
+
+  /* Filter Controls on Mobile */
+  .travel-list-section {
+    margin-top: 28px;
+  }
+
+  .travel-list-controls {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .travel-filters {
+    flex-wrap: nowrap;
+    gap: 6px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+
+  .travel-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .travel-filter-chip {
+    flex-shrink: 0;
+    font-size: 12px;
+    padding: 6px 14px;
+    white-space: nowrap;
+  }
+
+  .travel-view-toggle {
+    align-self: flex-start;
+  }
+
+  /* Cards Grid on Mobile */
+  .travel-cards-grid {
+    gap: 14px;
+    grid-template-columns: 1fr;
+  }
+
+  .travel-card {
+    border-radius: 14px;
+    padding: 16px;
+  }
+
+  .travel-card-title {
+    font-size: 17px;
+    margin: 6px 0 4px;
+  }
+
+  .travel-card-highlights {
+    font-size: 13px;
+    line-height: 1.45;
+    margin-bottom: 12px;
+  }
+
+  .travel-card-footer {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .travel-card-coords {
+    font-size: 11px;
+  }
+
+  .travel-locate-btn {
+    font-size: 12px;
+  }
+
+  .travel-table-container {
+    border-radius: 12px;
+  }
+
+  .travel-table th,
+  .travel-table td {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .travel-section {
+    padding-top: 140px;
+    padding-bottom: 120px;
+  }
+}
+
+
+.travel-geography {
+  fill: #262626;
+  stroke: #383838;
+  stroke-width: 0.5px;
+  outline: none;
+  transition: fill 0.2s ease, stroke 0.2s ease;
+  cursor: grab;
+}
+
+.travel-geography:hover {
+  fill: #323c4a;
+  stroke: #4e5e80;
+  outline: none;
 }

@@ -61,6 +61,13 @@ export function Header() {
           Projects
         </Link>
         <Link
+          href="/travel"
+          onClick={() => setMenuOpen(false)}
+          aria-current={pathname === "/travel" ? "page" : undefined}
+        >
+          Travel
+        </Link>
+        <Link
           href="/about"
           onClick={() => setMenuOpen(false)}
           aria-current={pathname === "/about" ? "page" : undefined}
