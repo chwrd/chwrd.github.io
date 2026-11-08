@@ -5,7 +5,7 @@ import PortfolioCarousel, { type PhotoCard } from "./portfolio-carousel";
 export const metadata: Metadata = {
   title: "Art Portfolio — Howard Cheng",
   description:
-    "Photography portfolio featuring scenes from Chongqing and Suzhou (2025).",
+    "Photography portfolio featuring scenes from Jiangsu (2025).",
 };
 
 const portfolioPhotos: PhotoCard[] = [
@@ -18,7 +18,7 @@ const portfolioPhotos: PhotoCard[] = [
     title: "Suzhou Museum",
     description:
       "Modernist geometric pavilions and whitewashed walls mirrored across tranquil reflection pools, honoring classical Jiangnan aesthetics.",
-    src: "/art-portfolio/Chongqing%202025/DSC08987.jpg",
+    src: "/art-portfolio/Jiangsu%202025/DSC08987.jpg",
     alt: "Suzhou Museum modern geometric architecture and reflection pool",
     angle: "2.5deg",
   },
@@ -31,7 +31,7 @@ const portfolioPhotos: PhotoCard[] = [
     title: "Butterfly Reverie",
     description:
       "Traditional floral headdress and sheer embroidery framed within an antique carved wooden window.",
-    src: "/art-portfolio/Chongqing%202025/DSC09013.jpg",
+    src: "/art-portfolio/Jiangsu%202025/DSC09013.jpg",
     alt: "Woman in traditional Chinese attire holding butterfly fan in wooden window",
     angle: "-3.5deg",
   },
@@ -44,7 +44,7 @@ const portfolioPhotos: PhotoCard[] = [
     title: "Pingjiang Road Guardian",
     description:
       "A moment of everyday rest beneath an ancient stone guardian lion along the historic canal streets.",
-    src: "/art-portfolio/Chongqing%202025/DSC09115.jpg",
+    src: "/art-portfolio/Jiangsu%202025/DSC09115.jpg",
     alt: "Stone guardian lion statue on street with man resting at the base",
     angle: "3deg",
   },
@@ -57,7 +57,7 @@ const portfolioPhotos: PhotoCard[] = [
     title: "Canal Waterway",
     description:
       "Lantern-draped bridges and whitewashed riverfront residences reflected along the canal waterways.",
-    src: "/art-portfolio/Chongqing%202025/DSC09137.jpg",
+    src: "/art-portfolio/Jiangsu%202025/DSC09137.jpg",
     alt: "Canal waterway lined with stone bridges and traditional houses",
     angle: "-4deg",
   },
@@ -70,7 +70,7 @@ const portfolioPhotos: PhotoCard[] = [
     title: "Embroidered Elegance",
     description:
       "Sunlit portrait in a classic embroidered black qipao and pearls beside the historic stone embankment.",
-    src: "/art-portfolio/Chongqing%202025/DSC09145.jpg",
+    src: "/art-portfolio/Jiangsu%202025/DSC09145.jpg",
     alt: "Woman in black embroidered qipao seated by the canal",
     angle: "3.5deg",
   },
@@ -83,7 +83,7 @@ const portfolioPhotos: PhotoCard[] = [
     title: "Street Companions",
     description:
       "Curious feline companions and a woven basket basking in the afternoon light of a quiet storefront.",
-    src: "/art-portfolio/Chongqing%202025/DSC09155.jpg",
+    src: "/art-portfolio/Jiangsu%202025/DSC09155.jpg",
     alt: "Fluffy cats resting by a woven basket on cobblestone pavement",
     angle: "-3deg",
   },
@@ -96,7 +96,7 @@ const portfolioPhotos: PhotoCard[] = [
     title: "City Rhythms",
     description:
       "A lively gathering of friends and passersby sheltered under the canopy of mature plane trees.",
-    src: "/art-portfolio/Chongqing%202025/DSC09167.jpg",
+    src: "/art-portfolio/Jiangsu%202025/DSC09167.jpg",
     alt: "Street crowd at crosswalk under leafy plane trees",
     angle: "4deg",
   },
@@ -109,7 +109,7 @@ const portfolioPhotos: PhotoCard[] = [
     title: "The Photographer",
     description:
       "A bright candid moment framed by verdant garden leaves and a traditional wooden tour boat.",
-    src: "/art-portfolio/Chongqing%202025/DSC09263.jpg",
+    src: "/art-portfolio/Jiangsu%202025/DSC09263.jpg",
     alt: "Photographer with camera smiling beside canal tour boat",
     angle: "-3.5deg",
   },
@@ -122,7 +122,7 @@ const portfolioPhotos: PhotoCard[] = [
     title: "Afternoon Repose",
     description:
       "A peaceful outdoor breather accompanied by a loyal Shiba Inu companion on a warm day.",
-    src: "/art-portfolio/Chongqing%202025/DSC09313.jpg",
+    src: "/art-portfolio/Jiangsu%202025/DSC09313.jpg",
     alt: "Woman in lawn chair relaxing beside a Shiba Inu dog",
     angle: "2.5deg",
   },

@@ -15,7 +15,7 @@ Explore the live site at **[chwrd.github.io](https://chwrd.github.io/)**.
   - **VendorLink** — A modern marketplace platform connecting vendors and customers.
   - **SoloGo** — An AI-powered travel assistant built for solo adventurers during UWB Hacks.
 - **Interactive Travel & Exchanges Map** — An interactive world map visualizing travel history, study-abroad experiences, and academic delegations across East Asia and North America, complete with category filters and dual card/table views.
-- **Art & Photography Portfolio** — An interactive showcase featuring street, portrait, and architectural photography from Suzhou, Wuxi, and Chongqing.
+- **Art & Photography Portfolio** — An interactive showcase featuring street, portrait, and architectural photography from Jiangsu, China.
 - **Background & Bio** — Academic coursework, honors (Gilman Scholarship), exchange programs, and technical skillsets.
 - **Connect & Contact** — Direct links to GitHub, LinkedIn, and professional contact channels.
 
