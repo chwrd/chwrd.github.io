@@ -214,3 +214,6 @@ export function Footer({ standalone = true }: { standalone?: boolean }) {
     </footer>
   );
 }
+
+export { PageHeader } from "./PageHeader";
+export type { PageHeaderProps, HeaderStat } from "./PageHeader";

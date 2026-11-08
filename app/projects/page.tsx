@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import Image from "next/image";
-import { Footer, Header } from "../components/site";
+import { Footer, Header, PageHeader } from "../components/site";
+
+export const metadata: Metadata = {
+  title: "Projects — Howard Cheng",
+  description:
+    "Explore software engineering projects, web applications, and technical innovations by Howard Cheng.",
+};
 
 const projects = [
   {
@@ -25,8 +32,19 @@ export default function ProjectsPage() {
     <main>
       <section className="work-section page-section">
         <Header />
-        <div className="work-inner">
-          <h2>My Recent Work</h2>
+        <div className="page-inner work-inner">
+          <PageHeader
+            eyebrow="💻 Portfolio &amp; Works"
+            title="Featured Projects"
+            description="Full-stack web applications, production systems designed to streamline user experiences and solve practical challenges."
+            stats={[
+              { icon: "🚀", value: projects.length, label: "Featured Projects" },
+              { icon: "⚡", value: "Full-Stack", label: "Next.js & AI" },
+              { icon: "🌐", value: "Live", label: "Deployed Apps" },
+              { icon: "💻", value: "Open", label: "Source Code" },
+            ]}
+          />
+
           <div className="project-list">
             {projects.map((project) => (
               <a

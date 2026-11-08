@@ -1,21 +1,31 @@
-import { Footer, Header } from "../components/site";
+import type { Metadata } from "next";
+import { Footer, Header, PageHeader } from "../components/site";
+
+export const metadata: Metadata = {
+  title: "About — Howard Cheng",
+  description:
+    "Learn about Howard Cheng, a Computer Science student at the University of Washington, Gilman Scholar, and software developer.",
+};
 
 export default function AboutPage() {
   return (
     <main>
       <section className="about-section page-section">
         <Header />
-        <div className="about-inner">
+        <div className="page-inner about-inner">
           <div className="about-copy">
-            <section className="about-bio">
-              <h2>About Howard</h2>
-              <p>
-                I&apos;m a Computer Science student at the University of
-                Washington. I recently participated in an exchange program at
-                The Chinese University of Hong Kong (2025–2026) and earned
-                recognition as a Gilman Scholar (2025).
-              </p>
-            </section>
+            <PageHeader
+              eyebrow="👨‍💻 Background &amp; Bio"
+              title="About Howard"
+              description="Computer Science student at the University of Washington (Class of 2028), Gilman Scholar, and software developer."
+              stats={[
+                { icon: "🎓", value: "3.5", label: "UW GPA" },
+                { icon: "🏛️", value: "2028", label: "Expected Grad" },
+                { icon: "🌏", value: "CUHK", label: "Exchange 25–26" },
+                { icon: "🏆", value: "Gilman", label: "Scholar 2025" },
+              ]}
+            />
+
             <div className="about-details">
               <section className="about-subsection">
                 <h3>Education</h3>
