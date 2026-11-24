@@ -27,9 +27,9 @@ export function Header() {
     <header className={`topbar${menuOpen ? " topbar-open" : ""}`}>
       <Link
         className="home-link"
-        href="/"
+        href="/#home"
         onClick={() => setMenuOpen(false)}
-        aria-current={pathname === "/" ? "page" : undefined}
+        aria-current={pathname === "/" || pathname === "/home" ? "page" : undefined}
       >
         Home
       </Link>
@@ -47,35 +47,35 @@ export function Header() {
       </button>
       <nav className="site-menu" id="site-menu" aria-label="Main menu">
         <Link
-          href="/art-portfolio"
-          onClick={() => setMenuOpen(false)}
-          aria-current={pathname === "/art-portfolio" ? "page" : undefined}
-        >
-          Art Portfolio
-        </Link>
-        <Link
-          href="/projects"
-          onClick={() => setMenuOpen(false)}
-          aria-current={pathname === "/projects" ? "page" : undefined}
-        >
-          Projects
-        </Link>
-        <Link
-          href="/travel"
-          onClick={() => setMenuOpen(false)}
-          aria-current={pathname === "/travel" ? "page" : undefined}
-        >
-          Travel
-        </Link>
-        <Link
-          href="/about"
+          href="/#about"
           onClick={() => setMenuOpen(false)}
           aria-current={pathname === "/about" ? "page" : undefined}
         >
           About
         </Link>
         <Link
-          href="/contact"
+          href="/#projects"
+          onClick={() => setMenuOpen(false)}
+          aria-current={pathname === "/projects" ? "page" : undefined}
+        >
+          Projects
+        </Link>
+        <Link
+          href="/#art-portfolio"
+          onClick={() => setMenuOpen(false)}
+          aria-current={pathname === "/art-portfolio" ? "page" : undefined}
+        >
+          Art Portfolio
+        </Link>
+        <Link
+          href="/#travel"
+          onClick={() => setMenuOpen(false)}
+          aria-current={pathname === "/travel" ? "page" : undefined}
+        >
+          Travel
+        </Link>
+        <Link
+          href="/#contact"
           onClick={() => setMenuOpen(false)}
           aria-current={pathname === "/contact" ? "page" : undefined}
         >

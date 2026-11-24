@@ -10,7 +10,15 @@ import TravelMap, {
 
 type CategoryFilter = "all" | "travel" | "study-abroad";
 
-export default function TravelView() {
+interface TravelViewProps {
+  showHeader?: boolean;
+  showFooter?: boolean;
+}
+
+export default function TravelView({
+  showHeader = true,
+  showFooter = true,
+}: TravelViewProps = {}) {
   const [selectedId, setSelectedId] = useState<string | null>("seattle-home");
   const [activeFilter, setActiveFilter] = useState<CategoryFilter>("all");
   const [viewMode, setViewMode] = useState<"cards" | "table">("cards");
@@ -37,9 +45,9 @@ export default function TravelView() {
   };
 
   return (
-    <main>
+    <div id="travel">
       <section className="travel-section page-section">
-        <Header />
+        {showHeader && <Header />}
 
         <div className="page-inner travel-inner">
           <PageHeader
@@ -370,7 +378,7 @@ export default function TravelView() {
         <div className="plane"></div>
       </section>
 
-      <Footer standalone={false} />
-    </main>
+      {showFooter && <Footer standalone={false} />}
+    </div>
   );
 }

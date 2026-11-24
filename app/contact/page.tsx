@@ -7,11 +7,19 @@ export const metadata: Metadata = {
     "Get in touch with Howard Cheng regarding software engineering, project collaborations, and professional opportunities.",
 };
 
-export default function ContactPage() {
+interface ContactPageProps {
+  showHeader?: boolean;
+  showFooter?: boolean;
+}
+
+export default function ContactPage({
+  showHeader = true,
+  showFooter = true,
+}: ContactPageProps = {}) {
   return (
-    <main>
+    <div id="contact">
       <section className="contact-section page-section">
-        <Header />
+        {showHeader && <Header />}
         <div className="page-inner contact-inner">
           <PageHeader
             eyebrow="📫 Get In Touch"
@@ -46,7 +54,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-      <Footer standalone={false} />
-    </main>
+      {showFooter && <Footer standalone={false} />}
+    </div>
   );
 }

@@ -13,6 +13,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function TravelPage() {
-  return <TravelView />;
+interface TravelPageProps {
+  showHeader?: boolean;
+  showFooter?: boolean;
+}
+
+export default function TravelPage({
+  showHeader = true,
+  showFooter = true,
+}: TravelPageProps = {}) {
+  return <TravelView showHeader={showHeader} showFooter={showFooter} />;
 }

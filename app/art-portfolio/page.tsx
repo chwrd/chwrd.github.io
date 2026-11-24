@@ -128,11 +128,19 @@ const portfolioPhotos: PhotoCard[] = [
   },
 ];
 
-export default function ArtPortfolioPage() {
+interface ArtPortfolioPageProps {
+  showHeader?: boolean;
+  showFooter?: boolean;
+}
+
+export default function ArtPortfolioPage({
+  showHeader = true,
+  showFooter = true,
+}: ArtPortfolioPageProps = {}) {
   return (
-    <main>
+    <div id="art-portfolio">
       <section className="work-section page-section art-portfolio-section">
-        <Header />
+        {showHeader && <Header />}
         <div className="page-inner work-inner">
           <PageHeader
             eyebrow="📷 Visual Journey"
@@ -148,7 +156,7 @@ export default function ArtPortfolioPage() {
           <PortfolioCarousel photos={portfolioPhotos} />
         </div>
       </section>
-      <Footer standalone={false} />
-    </main>
+      {showFooter && <Footer standalone={false} />}
+    </div>
   );
 }

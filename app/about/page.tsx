@@ -7,11 +7,19 @@ export const metadata: Metadata = {
     "Learn about Howard Cheng, a Computer Science student at the University of Washington, Gilman Scholar, and software developer.",
 };
 
-export default function AboutPage() {
+interface AboutPageProps {
+  showHeader?: boolean;
+  showFooter?: boolean;
+}
+
+export default function AboutPage({
+  showHeader = true,
+  showFooter = true,
+}: AboutPageProps = {}) {
   return (
-    <main>
+    <div id="about">
       <section className="about-section page-section">
-        <Header />
+        {showHeader && <Header />}
         <div className="page-inner about-inner">
           <div className="about-copy">
             <PageHeader
@@ -94,7 +102,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      <Footer standalone={false} />
-    </main>
+      {showFooter && <Footer standalone={false} />}
+    </div>
   );
 }

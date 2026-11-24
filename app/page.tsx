@@ -1,54 +1,27 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Footer, Header } from "./components/site";
+import type { Metadata } from "next";
+import HomePage from "./home/page";
+import AboutPage from "./about/page";
+import ProjectsPage from "./projects/page";
+import ArtPortfolioPage from "./art-portfolio/page";
+import TravelPage from "./travel/page";
+import ContactPage from "./contact/page";
+import { Footer } from "./components/site";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Howard Cheng — Software/Web Developer",
+  description:
+    "Portfolio, software engineering projects, art, travel, and background of Howard Cheng.",
+};
+
+export default function Page() {
   return (
-    <main>
-      <section className="hero">
-        <Header />
-        <div className="hero-content">
-          <div className="hero-copy">
-            <span className="eyebrow">👋 Hello</span>
-            <h1>Howard Cheng</h1>
-            <p className="hero-summary">
-              Software/Web Developer · University of Washington
-            </p>
-            <div className="hero-actions">
-              <Link className="button button-primary" href="/projects">
-                Projects
-              </Link>
-              <Link className="button button-outline" href="/contact">
-                Connect
-              </Link>
-            </div>
-          </div>
-          <div className="hero-art">
-            <Image
-              src="/illustrated-portrait.png"
-              alt="Illustrated portrait"
-              fill
-              priority
-              sizes="300px"
-            />
-          </div>
-        </div>
-      </section>
-      <section className="about-section">
-        <div className="about-inner">
-          <div className="about-copy">
-            <section className="about-bio">
-              <h2>About Howard</h2>
-              <p>
-                I&apos;m a Computer Science student at the University of
-                Washington. I recently participated in an exchange program at
-                The Chinese University of Hong Kong (2025–2026) and earned
-                recognition as a Gilman Scholar (2025).
-              </p>
-            </section>
-          </div>
-        </div>
-      </section>
+    <main className="single-page">
+      <HomePage showHeader={true} showFooter={false} showBio={false} />
+      <AboutPage showHeader={false} showFooter={false} />
+      <ProjectsPage showHeader={false} showFooter={false} />
+      <ArtPortfolioPage showHeader={false} showFooter={false} />
+      <TravelPage showHeader={false} showFooter={false} />
+      <ContactPage showHeader={false} showFooter={false} />
       <Footer standalone={false} />
     </main>
   );
